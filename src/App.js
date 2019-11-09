@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FunctionButton from './components/functionButton';
 import Timer from './components/timer';
@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 const App = () => {
   const classes = useStyles();
+  const [timeLeft, setTimeLeft] = useState(1500);
 
   return (
     <Container className={classes.container}>
@@ -29,7 +30,7 @@ const App = () => {
         </Grid>
         <Grid item md={4}>
           <Paper className={classes.paper}>
-            <Timer />
+            <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
             <FunctionButton />
           </Paper>
         </Grid>
