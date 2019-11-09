@@ -30,8 +30,8 @@ const App = () => {
                 </Grid>
                 <Grid item md={4}>
                     <Paper className={classes.paper}>
-                        <Timer timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
-                        <FunctionButton />
+                        <Timer timeLeft={timeLeft} />
+                        <FunctionButton timeLeft={timeLeft} setTimeLeft={setTimeLeft} />
                     </Paper>
                 </Grid>
                 <Grid item md={4}>
